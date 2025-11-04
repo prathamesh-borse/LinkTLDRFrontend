@@ -79,7 +79,7 @@ export default function SummaryForm() {
     return (
         <Card className="border border-slate-200/60 bg-white/70 backdrop-blur-xl shadow-xl gap-3">
             <CardHeader>
-                <CardTitle className="text-slate-800">LinkedIn Post urlRequest</CardTitle>
+                <CardTitle className="text-slate-800">LinkedIn Post URL</CardTitle>
             </CardHeader>
             <CardContent>
                 <div className="flex flex-col gap-3">
