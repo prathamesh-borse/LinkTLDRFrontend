@@ -35,7 +35,6 @@ export default function SummaryForm() {
         try {
             // Call backend; if it fails, gracefully fallback to mock with 2s delay
             const res = await summarizeUrl(urlRequest);
-            console.log("res", res);
             setSummary(res.summary);
             toast.success("Summary ready");
         } catch (e) {
@@ -44,7 +43,6 @@ export default function SummaryForm() {
             const pick = MOCK_SUMMARIES[(seed + Math.floor(Math.random() * MOCK_SUMMARIES.length)) % MOCK_SUMMARIES.length];
             setSummary(pick);
             setSeed((s) => s + 1);
-            console.log("exception: ", e);
             toast.info("Using mock AI summary (dev mode)");
         } finally {
             setLoading(false);
